@@ -1,25 +1,51 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from 'react';
+import Counter from './Counter';
+import Greeting from './Greeting';
+import Example from './Example';
+import TodoList from './TodoList';  
 
+// Komponen Header
+function Header() {
+  return (
+    <header>
+      <h1>Aplikasi React Saya</h1>
+    </header>
+  );
+}
+
+// Komponen Main
+function Main() {
+  return (
+    <main>
+      <h2>Selamat datang di Aplikasi React Saya!</h2>
+      <p>Ini Adalah area konten utama.</p>
+    </main>
+  );
+}
+
+// KOmponen footer
+function Footer() {
+  return (
+    <footer>
+      <p>&copy; 2023 Aplikasi React Saya</p>
+    </footer>
+  );
+}
+
+// Komponen App yang menggunakan Header, Main, dan Footer
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <Header />
+      <Main />
+      <Greeting name="John" />
+      <Counter />
+      <Example />
+      <TodoList/>
+      <Footer />
     </div>
   );
 }
+
 
 export default App;
